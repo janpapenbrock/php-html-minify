@@ -6,7 +6,9 @@ Want whitespace-free HTML for lowest page size? Save your mobile visitors some b
 
 This is available via composer:
 
-    
+    "require": {
+        "janpapenbrock/php-html-optimization": "~1.0"
+    }
 
 ## Usage
 
