@@ -1,0 +1,8 @@
+web:
+  build: docker/php-apache/
+  volumes:
+    - ./:/var/www/html
+  ports:
+    - 80:80
+  environment:
+    - env=development

@@ -1,0 +1,4 @@
+composer:
+  build: docker/composer/
+  volumes:
+    - ./:/app

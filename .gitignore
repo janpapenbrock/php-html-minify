@@ -1,0 +1,8 @@
+# IDE settings
+/.idea
+
+# Project dependencies
+/vendor
+
+# Test artifacts
+/build

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.phpunit.de/5.1/phpunit.xsd" bootstrap="vendor/autoload.php" backupGlobals="false" verbose="true">
+
+    <testsuites>
+        <testsuite name="unit">
+            <directory suffix=".php">test</directory>
+        </testsuite>
+    </testsuites>
+
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">src</directory>
+        </whitelist>
+    </filter>
+
+    <logging>
+        <log type="coverage-html" target="build/coverage"/>
+    </logging>
+
+    <php>
+        <const name="PHPUNIT_TESTSUITE" value="true"/>
+        <ini name="display_errors" value="On" />
+        <ini name="display_startup_errors" value="On" />
+        <ini name="precision" value="14" />
+        <ini name="serialize_precision" value="14" />
+    </php>
+</phpunit>
+
