@@ -7,10 +7,10 @@ Want whitespace-free HTML for lowest page size? Save your mobile visitors some b
 This is available via composer:
 
     "require": {
-        "janpapenbrock/php-html-optimization": "~1.0"
+        "janpapenbrock/php-html-minify": "~1.0"
     }
 
 ## Usage
 
-    $optimizer = new janpapenbrock\HtmlOptimization\Optimizer();
-    $minHtml = $optimizer->optimize($html);
+    $minify = new janpapenbrock\HtmlMinify\HtmlMinify();
+    $minHtml = $minify->minify($html);

@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of HtmlOptimization.
+ * This file is part of HtmlMinify.
  *
  * (c) Jan Papenbrock <mail@janpapenbrock.de>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace janpapenbrock\HtmlOptimization\Steps;
+namespace janpapenbrock\HtmlMinify\Steps;
 
 /**
  * Optimization task to remove whitespaces.

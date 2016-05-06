@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of HtmlOptimization.
+ * This file is part of HtmlMinify.
  *
  * (c) Jan Papenbrock <mail@janpapenbrock.de>
  *
@@ -9,18 +9,18 @@
  * file that was distributed with this source code.
  */
 
-namespace janpapenbrock\HtmlOptimization;
+namespace janpapenbrock\HtmlMinify;
 
 use PHPUnit_Framework_TestCase;
 
 /**
- * Test the optimizer. It should load and apply steps.
+ * Test the minifyer. It should load and apply steps.
  *
- * @see Optimizer
+ * @see HtmlMinify
  */
-class OptimizerTest extends PHPUnit_Framework_TestCase
+class HtmlMinifyTest extends PHPUnit_Framework_TestCase
 {
-    /** @var Optimizer */
+    /** @var HtmlMinify */
     protected $subject;
 
     /**
@@ -31,7 +31,7 @@ class OptimizerTest extends PHPUnit_Framework_TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->subject = new Optimizer();
+        $this->subject = new HtmlMinify();
     }
 
     /**
@@ -77,7 +77,7 @@ class OptimizerTest extends PHPUnit_Framework_TestCase
 
         foreach ($optimizers as $step) {
             $this->assertInstanceOf(
-                'janpapenbrock\HtmlOptimization\Steps\Step',
+                'janpapenbrock\HtmlMinify\Steps\Step',
                 $step
             );
         }

@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of HtmlOptimization.
+ * This file is part of HtmlMinify.
  *
  * (c) Jan Papenbrock <mail@janpapenbrock.de>
  *
@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace janpapenbrock\HtmlOptimization;
+namespace janpapenbrock\HtmlMinify;
 
-use janpapenbrock\HtmlOptimization\Steps\Step;
+use janpapenbrock\HtmlMinify\Steps\Step;
 
 /**
  * HTML optimization and minification.
@@ -19,20 +19,20 @@ use janpapenbrock\HtmlOptimization\Steps\Step;
  * Will reduce your HTML of all that funky noise that makes it human readable, but so big and slow.
  *
  * Usage:
- *   $optimizer = new janpapenbrock\HtmlOptimization\Optimizer();
- *   $minHtml = $optimizer->optimize($html);
+ *   $minify = new janpapenbrock\HtmlMinify\HtmlMinify();
+ *   $minHtml = $minify->minify($html);
  */
-class Optimizer
+class HtmlMinify
 {
 
     /**
-     * Optimize given HTML.
+     * Minify given HTML.
      *
      * @param string $html
      *
      * @return string
      */
-    public function optimize($html)
+    public function minify($html)
     {
         $result = $html;
 
@@ -74,7 +74,7 @@ class Optimizer
     {
         $result = null;
 
-        $className = sprintf('janpapenbrock\HtmlOptimization\Steps\%s', $name);
+        $className = sprintf('janpapenbrock\HtmlMinify\Steps\%s', $name);
         if (class_exists($className)) {
             $result = new $className();
         }
